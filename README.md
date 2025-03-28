@@ -4,8 +4,6 @@ Para que o código funcione, use:
 npm install express mongoose dotenv morgan
 npm install --save-dev nodemon
 npm run dev
-v
-
 
 A API expõe os seguintes endpoints para manipular Períodos Letivos:
 
