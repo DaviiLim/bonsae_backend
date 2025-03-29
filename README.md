@@ -4,8 +4,12 @@ Para que o código funcione, use:
 npm install express mongoose dotenv morgan
 npm install --save-dev nodemon
 npm run dev
-v
 
+No .env você precisa colocar o URL do seu MONGO!!
+
+padrão : 
+PORT= 8080
+MONGO_URL=mongodb://localhost:27017/
 
 A API expõe os seguintes endpoints para manipular Períodos Letivos:
 
