@@ -1,11 +1,11 @@
-const express = require('express')
-const morgan = require('morgan')
-const router = require('./routes/periodoLetivoRouter.js')
+const express = require('express');
+const morgan = require('morgan');
+const importRouter = require('./routes/importRouter.js');
 
-const app = express()
+const app = express();
 
-app.use(morgan('dev'))
-app.use(express.json())
-app.use('/', router)
+app.use(morgan('dev'));
+app.use(express.json());
+app.use('/', importRouter);
 
-module.exports = app
+module.exports = app;
