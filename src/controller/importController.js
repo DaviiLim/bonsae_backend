@@ -1,7 +1,8 @@
-const ImportService = require('../service/importService');
+const ImportService = require('../service/importService.js');
 
 class ImportController {
-  async processar(req, res) {
+
+  async controller(req, res) {
     const { etapa, batchId, dados } = req.body;
 
     if (!etapa || !batchId || !dados || dados.length === 0) {
@@ -12,17 +13,20 @@ class ImportController {
       let resultado;
 
       switch (etapa) {
-
         case 'periodo-letivo':
           resultado = await ImportService.processarPeriodoLetivo(batchId, dados);
-          break
+          break;
         
         case 'disciplina':
           resultado = await ImportService.processarDisciplinas(batchId, dados);
-          break
+          break;
+        
+        default:
+          return res.status(400).json({ erro: 'Etapa inválida!' });
       }
 
       res.json(resultado);
+
     } catch (error) {
       res.status(400).json({ erro: error.message });
     }
