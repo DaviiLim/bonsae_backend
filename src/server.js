@@ -1,7 +1,7 @@
-const app = require('./app.js')
-const connectToMongoDB = require('./config/mongoDB.js')
+const app = require('./app.js');
+const connectToMongoDB = require('./config/mongoDB.js');
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080;
 
 connectToMongoDB()
 .then(() => {
