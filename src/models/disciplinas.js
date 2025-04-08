@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const DisciplinaSchema = new Schema({
-  periodoLetivo: { type: String, required: true }, 
+  periodoLetivo: { type: String, required: true }, //Não sei se é melhor pelo mongoID ou como está.
   disciplina: { type: String },
   codigoDisciplina: { type: String, required: true }, 
   dataInicial: { type: Date },
