@@ -2,7 +2,7 @@ const ImportService = require('../service/importService.js');
 
 class ImportController {
 
-  async controller(req, res) {
+  async importDados(req, res) {
     const { etapa, batchId, dados } = req.body;
 
     if (!etapa || !batchId || !dados || dados.length === 0) {
